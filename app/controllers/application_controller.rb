@@ -8,6 +8,8 @@ class ApplicationController < Sinatra::Base
     set :session_secret, '@3x!ilt£'
     set :public_folder, 'public'
     set :views, 'app/views'
+    set :raise_errors, false
+    set :show_exceptions, false
   end
 
   get '/' do
@@ -28,4 +30,10 @@ class ApplicationController < Sinatra::Base
     @username = session[:username]
     erb :results
   end
+
+  error do
+    erb :invalid
+  end
+
+  run! if app_file == $PROGRAM_NAME
 end
