@@ -23,12 +23,12 @@ Capybara
 
 ```
 As a User
-So that I can see the results
-I want to be able to search by username someone's favourite programming language
-
-As a User
 So I can start my search
 I want to be able to input a username
+
+As a User
+So that I can know someone's favourite programming language
+I want to be able to see a results page
 
 As a User
 So that I can search multiple users
@@ -36,5 +36,5 @@ I want to be able to go back to the main screen
 
 As a User
 So that I know a username doesn't exist
-I would like to be shown a message
+I would like to be shown an error message
 ```
