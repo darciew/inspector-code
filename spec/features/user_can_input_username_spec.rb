@@ -6,4 +6,12 @@ feature 'Filling in Username' do
 
     expect(page).to have_selector("input[name='username']")
   end
-end 
+
+  scenario 'Fills in form with valid user and is directed to the /results page' do
+    visit '/'
+    fill_in 'username', with: 'darciew'
+    click_on 'Submit'
+
+    expect(page).to have_current_path '/results'
+  end
+end

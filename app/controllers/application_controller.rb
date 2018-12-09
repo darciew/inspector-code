@@ -11,4 +11,13 @@ class ApplicationController < Sinatra::Base
   get '/' do
     erb :index
   end
+
+  post '/username' do
+    @username = params[:username]
+    redirect '/results'
+  end
+
+  get '/results' do
+    "Results"
+  end
 end
