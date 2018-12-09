@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe GithubApi do
   let(:username) { 'username' }
   subject(:github_api) { described_class.new(username) }
