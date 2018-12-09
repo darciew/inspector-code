@@ -16,4 +16,13 @@ feature 'Error Page' do
 
     expect(page).to have_selector("input[class='return-home']")
   end
+
+  scenario 'Can click back to the homepage from the error page' do
+    visit '/'
+    fill_in 'username', with: 'bad user name'
+    click_on 'Submit'
+    click_on 'Try Another?'
+
+    expect(page).to have_current_path '/'
+  end
 end
