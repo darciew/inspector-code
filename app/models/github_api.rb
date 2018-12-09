@@ -11,5 +11,6 @@ class GithubApi
 
   def repos
     response = HTTParty.get("https://api.github.com/users/#{username}/repos")
+    JSON.parse(response.body)
   end
 end
