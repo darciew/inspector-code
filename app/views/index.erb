@@ -1,4 +1,10 @@
 <div class="container">
   <h1 class="homepage-title">Inspector Code</h1>
   <h2 class="content">Enter a Github username and see if Inspector Code can guess what that user's favourite programming language is based on the language that appears most often across all of their repositories!</h2>
+  <form action="/user" method="post">
+    <label for="username">
+      <input type="text" name="username" placeholder="Enter A Username" required>
+    </label>
+    <input type="submit" value="Submit">
+  </form>
 </div>
