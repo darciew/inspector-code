@@ -15,11 +15,16 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/username' do
+    @github = GithubApi.new(params[:username])
+    @results = Results.new(@github)
+    @language = @results.favourite_language
+    session[:language] = @language
     session[:username] = params[:username]
     redirect '/results'
   end
 
   get '/results' do
+    @language = session[:language]
     @username = session[:username]
     erb :results
   end

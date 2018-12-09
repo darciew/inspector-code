@@ -11,4 +11,10 @@ describe Results do
       expect(results.languages.length).to eq 3
     end
   end
+
+  describe '#favourite_language' do
+    it 'returns a favourite language' do
+      expect(results.favourite_language).to eq 'Ruby'
+    end
+  end
 end
