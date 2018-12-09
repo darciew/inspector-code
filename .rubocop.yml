@@ -1,0 +1,12 @@
+inherit_from: .rubocop_todo.yml
+
+Style/Documentation:
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/LineLength:
+  Exclude:
+    - 'spec/**/*'
+
+Documentation:
+  Enabled: false
