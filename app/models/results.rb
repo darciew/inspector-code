@@ -10,14 +10,14 @@ class Results
     @languages = []
   end
 
-  def repo_languages
-    @github_api.repos.each do |repo|
-      @languages << repo['language']
+  def repository_languages
+    @github_api.repositories.each do |repository|
+      @languages << repository['language']
     end
   end
 
   def favourite_language
-    repo_languages
+    repository_languages
     @languages.group_by(&:itself).values.max_by(&:size).first
   end
 end

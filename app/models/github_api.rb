@@ -9,7 +9,7 @@ class GithubApi
     @username = username
   end
 
-  def repos
+  def repositories
     response = HTTParty.get("https://api.github.com/users/#{username}/repos")
     JSON.parse(response.body)
   end

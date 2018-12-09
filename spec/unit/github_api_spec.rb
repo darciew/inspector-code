@@ -13,7 +13,7 @@ describe GithubApi do
       allow(HTTParty).to receive(:get).and_return(github_response)
       allow(JSON).to receive(:parse)
 
-      github_api.repos
+      github_api.repositories
     end
 
     it 'fetches the repos from Github api' do
