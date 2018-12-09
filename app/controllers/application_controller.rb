@@ -4,6 +4,8 @@ require './config/environment'
 
 class ApplicationController < Sinatra::Base
   configure do
+    enable :sessions
+    set :session_secret, '@3x!ilt£'
     set :public_folder, 'public'
     set :views, 'app/views'
   end
@@ -13,11 +15,12 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/username' do
-    @username = params[:username]
+    session[:username] = params[:username]
     redirect '/results'
   end
 
   get '/results' do
-    "Results"
+    @username = session[:username]
+    erb :results
   end
 end
