@@ -1,14 +1,15 @@
 # frozen_string_literal: true
 
-ENV['SINATRA_ENV'] = 'test'
-
 require 'simplecov'
 require 'simplecov-console'
 
 SimpleCov.formatter = SimpleCov::Formatter::Console
 SimpleCov.start
 
+ENV['SINATRA_ENV'] = 'test'
+
 require_relative '../config/environment'
+require_relative 'features/web_helper'
 require 'rack/test'
 require 'capybara/rspec'
 require 'capybara/dsl'
