@@ -1,4 +1,4 @@
-# Inspector Code
+# Inspector Code 🕵️‍♀️
 
 ## Task
 
@@ -13,6 +13,8 @@ Sinatra
 HTTParty
 
 HTML
+
+CSS
 
 RSpec
 
@@ -44,7 +46,7 @@ I would like to be shown an error message
 
 Clone this repo and navigate to the directory and install gems:
 ```
-$ git clone
+$ git clone git@github.com:darciew/inspector-code.git
 $ cd inspector-code
 ```
 Install gems:
@@ -53,19 +55,19 @@ $ bundle install
 ```
 Run tests:
 ```
-rspec
+$ rspec
 ```
 Run linter:
 ```
-rubocop
+$ rubocop
 ```
 Run the server:
 ```
-rackup -p 3000
+$ rackup -p 3000
 ```
 View in your web browser:
 ```
-http://localhost:3000
+$ http://localhost:3000
 ```
 
 ## Approach
@@ -93,7 +95,7 @@ I also feel a lot more confident now mocking out API calls and testing for the c
 The hardest part was mocking out that API call! I found it challenging because I wasn’t completely comfortable doing this whilst at Makers and we didn’t have a lot of exposure to this. However, as I mentioned, I learnt a lot whilst doing it and really happy with being able to mock out the correct HTTP call and parsing the json response.
 
 
-## Class and Request/Response Cycle Diagram
+## Class Diagram and Request/Response Cycle
 
 ![Imgur](https://i.imgur.com/N3toKul.png)
 
